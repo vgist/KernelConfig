@@ -82,6 +82,24 @@ You can get partuuid with `blkid` command that belongs to `sys-apps/util-linux`
 
 Get more information on [EFI stub kernel](https://wiki.gentoo.org/wiki/EFI_stub_kernel).
 
+### Kernel configuration
+
+Generate basic config
+
+    make savedefconfig
+
+Restore from basic config
+
+    cp /path/your-defconfig .config
+    make olddefconfig
+    # or
+    cp /path/your_defconfig arch/x86/configs/your_new_defconfig
+    make your_new_defconfig
+    ......
+    make -j`nproc` && make modules_install
+
+Read more: <https://wiki.gentoo.org/wiki/Kernel/Configuration>
+
 ### Hardware information
 
 ```
