@@ -1,7 +1,8 @@
 #### Devices
 
   - Thinkpad X230
-  - utm.app on MacOS
+  - Thinkpad X280
+  - utm.app on m1 MacBook Pro
 
 #### Compressed kernel modules
 
@@ -20,7 +21,7 @@ Generate basic config file
 Restore from basic config file
 
     cd /usr/src/linux/
-    cp /path/your-defconfig .config
+    cp /path/your_defconfig .config
     make olddefconfig
 
 or
