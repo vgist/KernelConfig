@@ -2,8 +2,7 @@ Thinkpad X230
 
 #### Wi-Fi
 
-- sys-firmware/linux-firmware or
-- sys-firmware/iwl6005-ucode
+- sys-firmware/linux-firmware
 
 #### Bluetooth
 
@@ -20,7 +19,7 @@ more: <https://wiki.gentoo.org/wiki/Intel_microcode>
 ```
 file: /etc/portage/make.conf
 
-COMMON_FLAGS="-march=ivybridge -O3 -pipe"
+COMMON_FLAGS="-march=ivybridge -O2 -pipe"
 CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
 MAKEOPTS="-j4"
@@ -64,7 +63,7 @@ Processor type and features  --->
 
 Boot with EFI stub kernel. You need efibootmgr to add boot option
 
-    efibootmgr -c -d /dev/sda -p 1 -l "\EFI\Gentoo\gentoo.efi" -L "Gentoo Linux" -u "root=PARTUUID=xxxxxxxxxx ro init=/lib/systemd/systemd quiet i915.fastboot=1"
+    efibootmgr -c -d /dev/sda -p 1 -l "\EFI\Gentoo\gentoo.efi" -L "Gentoo Linux" -u "root=PARTUUID=xxxxxxxxxx ro init=/lib/systemd/systemd quiet i915.lvds_downclock=1 i915.semaphores=1 i915.fastboot=1"
 
 Also rescue mode
 

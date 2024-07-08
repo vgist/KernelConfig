@@ -15,7 +15,7 @@ more: <https://wiki.gentoo.org/wiki/Intel_microcode>
 ```
 file: /etc/portage/make.conf
 
-COMMON_FLAGS="-march=skylake -O3 -pipe"
+COMMON_FLAGS="-march=skylake -O2 -pipe"
 CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
 MAKEOPTS="-j8"
@@ -28,7 +28,7 @@ MAKEOPTS="-j8"
 ```
 file: /etc/portage/make.conf
 
-CPU_FLAGS_X86="aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sse sse2 sse3 sse4_1 sse4_2 ssse3"
+CPU_FLAGS_X86="aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt sha sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3"
 ```
 
 #### USE flags
